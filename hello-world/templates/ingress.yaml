@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    ingress.kubernetes.io/rewrite-target: /
+  name: hello-world-ingress
+spec:
+  rules:
+  - host: icp.phyteldev.com
+    http:
+      paths:
+      - backend:
+          serviceName: hello-world-srv
+          servicePort: 8080
