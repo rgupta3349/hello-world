@@ -10,4 +10,8 @@ public class HelloWorldApplication {
 		SpringApplication.run(HelloWorldApplication.class, args);
 	}
 
+	public String echo(String name)
+	{
+		return name;
+	}
 }

@@ -1,16 +1,22 @@
-package com.rajan;
+package com.rajan.test;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
+import static org.junit.Assert.assertEquals;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
+import org.junit.*;
+
+import com.rajan.HelloWorldApplication;
+
 public class HelloWorldApplicationTests {
-
+	
 	@Test
-	public void contextLoads() {
+	public void test1() {
+		HelloWorldApplication obj = new HelloWorldApplication();
+		String data = "NoName";
+		String res = obj.echo(data);
+		
+		assertEquals("Failed",data,res);
+		
 	}
 
 }
+
